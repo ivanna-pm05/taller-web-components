@@ -3,30 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="js/search-card.js" defer></script> -->
+    <script src="js/perfil-card.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- <search-card></search-card> -->
     <div class="contenedor">
-        <div class="id-card">
-            <h2 slot="name">Scarlet Witch</h2>
-            <img src="img/ScarletWitch.jpg" alt="Foto-perfil">
-            <p slot="id-name"><b>Nombre clave:</b> Wanda </p>
-            <p slot="house"><b>Casa:</b> Marvel</p>
-            <p slot="age"><b>Año Aparicion:</b> September 04, 2024</p>
-            <p slot="description"><b>Drescripcion Resumen:</b> Wanda Maximoff, conocida como la Bruja Escarlata, es una hechicera romaní con la capacidad de usar magia del caos para alterar probabilidades a nivel cuántico y deformar la realidad como un ser nexo.</p>
-            <button>ver mas</button>
-        </div>
-        <div class="id-card2">
-            <h2 slot="name">Diana Prince</h2>
-            <img src="img/poster.jpeg" alt="Foto-perfil">
+        <perfil-card>
+                <h2 slot="nombre">Scarlet Witch</h2>
+                <span slot="imagen">ScarletWitch.jpg</span>
+                <p slot="id-name"><b>Nombre clave:</b> Wanda </p>
+                <p slot="house"><b>Casa:</b> Marvel</p>
+                <p slot="age"><b>Año Aparicion:</b> September 04, 2024</p>
+                <p slot="descripcion"><b>Drescripcion Resumen:</b> Wanda Maximoff, conocida como la Bruja Escarlata, es una hechicera romaní con la capacidad de usar magia del caos para alterar probabilidades a nivel cuántico y deformar la realidad como un ser nexo.</p>
+                <button>Ver mas</button>
+        </perfil-card>
+        
+        <perfil-card>
+            <h2 slot="nombre">Diana Prince</h2>
+            <span slot="imagen">poster.jpeg</span>
             <p slot="id-name"><b>Nombre clave:</b> Wonder Woman </p>
             <p slot="house"><b>Casa:</b> Marvel</p>
-            <p slot="age"><b>Año Aparicion:</b> September 04, 2024</p>
-            <p slot="description"><b>Drescripcion Resumen:</b> guerrera amazona de gran belleza y fuerza, con una apariencia física caracterizada por su túnica azul con estrellas, cinturón dorado, brazaletes de plata y diadema dorada con una estrella roja.</p>
-            <button>ver mas</button>
-        </div>
+            <p slot="age"><b>Año Aparicion:</b> 1984</p>
+            <p slot="descripcion"><b>Drescripcion Resumen:</b> Guerrera amazona de gran belleza y fuerza, con una apariencia física caracterizada por su túnica azul con estrellas, cinturón dorado, brazaletes de plata y diadema dorada con una estrella roja.</p>
+            <button>Ver mas</button>
+        </perfil-card>
+        <perfil-card> 
+            <h2 slot="nombre">Steve Rogers</h2>
+            <span slot="imagen">capi.webp</span>
+            <p slot="id-name"><b>Nombre clave:</b> Captain America </p>
+            <p slot="house"><b>Casa:</b> Marvel</p>
+            <p slot="age"><b>Año Aparicion:</b> 1999</p>
+            <p slot="descripcion"><b>Drescripcion Resumen:</b>  Se centra en Steve Rogers, el Capitán América original, mientras redescubre su identidad y lucha por el verdadero significado de la libertad en un mundo moderno y complejo.</p>
+            <button>Ver mas</button>
+        </perfil-card>
+        <perfil-card> 
+            <h2 slot="nombre">Bruce Wayne</h2>
+            <span slot="imagen">Batman.webp</span>
+            <p slot="id-name"><b>Nombre clave:</b> Batman</p>
+            <p slot="house"><b>Casa:</b> DC</p>
+            <p slot="age"><b>Año Aparicion:</b> 1939</p>
+            <p slot="descripcion"><b>Drescripcion Resumen:</b>  Es un superhéroe de DC Comics que se distingue por su traje de murciélago y su habilidad como el mejor detective del mundo, a pesar de no tener superpoderes.</p>
+            <button>Ver mas</button>
+        </perfil-card>
+        <perfil-card> 
+            <h2 slot="nombre">Bruce Wayne</h2>
+            <span slot="imagen">superman.jpg</span>
+            <p slot="id-name"><b>Nombre clave:</b> Superman</p>
+            <p slot="house"><b>Casa:</b> DC</p>
+            <p slot="age"><b>Año Aparicion:</b> 2016</p>
+            <p slot="descripcion"><b>Drescripcion Resumen:</b>  El mundo necesita un Hombre de Acero, pero ¿podrá Superman proteger al mundo mientras cría a un superhijo con su esposa, Lois Lane?.</p>
+            <button>Ver mas</button>
+        </perfil-card>
     </div>
-    
 </body>
 </html>
