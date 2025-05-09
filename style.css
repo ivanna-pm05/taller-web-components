@@ -13,7 +13,7 @@ body{
 p{
     color: #ffffff;
 }
-nombre:hover{
-    color: #ff1100;
-    transition: color 0.3s ease; /* Transición suave */
+perfil-card:hover{
+    transform: translateY(-5px);
+    background-color: #8b353591;
 }

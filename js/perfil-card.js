@@ -7,7 +7,7 @@ class PerfilCard extends HTMLElement {
         wrapper.innerHTML = /*html*/`
             <h2><slot name="nombre">[Sin nombre]</slot></h2>
             <img id="id-perfil" src="" alt="Foto-perfil">
-            <slot name="id-name">[Sin nombre clave]</slot>
+            <slot name="idname">[Sin nombre clave]</slot>
             <slot name="house">[Sin casa]</slot>
             <slot name="age">[Sin año de aparicion]</slot>
             <slot name="descripcion">[Sin descripcion]</slot>
