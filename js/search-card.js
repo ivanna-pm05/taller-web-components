@@ -15,7 +15,6 @@ class SearchCard extends HTMLElement {
                 justify-content: center;
                 margin-top: 20px;
             }
-
             input {
                 width: 80vw;
                 padding: 10px;

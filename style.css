@@ -2,7 +2,9 @@ body{
     background-image: url(img/fonto2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vh;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
 
 }
 .contenedor{
@@ -18,4 +20,61 @@ p{
 perfil-card:hover{
     transform: translateY(-5px);
     background-color: #8b353591;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90vw;
+  width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.modal-content h2 {
+  margin-top: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: repeat(1, 1fr);
+    perfil-card{
+        justify-items: center; 
+        align-items: center;
+        width: 100%;
+    }
+  }
 }
