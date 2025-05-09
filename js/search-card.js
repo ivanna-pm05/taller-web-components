@@ -1,41 +1,49 @@
- class SearchCard  extends HTMLElement {
+class SearchCard extends HTMLElement {
   constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          margin: 0 auto;
-          max-width: 600px;
-        }
-        input {
-          width: 100%;
-          padding: 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background-color: #8b353591;
-          border-radius: 8px;
-          color: white;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          padding: 16px;
-        }
-      </style>
+      super();
+      const shadow = this.attachShadow({ mode: 'open' });
 
-        <input type="text" placeholder="Search..." />
-    `;
-    }
-    connectedCallback() {
-    this.input = this.shadowRoot.querySelector('input');
-    this.input.addEventListener('input', () => {
-      const searchTerm = this.input.value.toLowerCase();
-      const cards = document.querySelectorAll('perfil-card');
-      cards.forEach(card => {
-        const idname = card.getAttribute('idname').toLowerCase();
-        const visible = idname.includes(searchTerm);
-        card.style.display = visible ? 'block' : 'none';
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = `
+          <input type="text" id="searchInput" placeholder="Buscar por nombre o nombre clave...">
+      `;
+
+      const style = document.createElement('style');
+      style.textContent = `
+           div {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            input {
+                width: 80vw;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+            }
+      `;
+
+      shadow.append(style, wrapper);
+  }
+
+  connectedCallback() {
+      const input = this.shadowRoot.querySelector('#searchInput');
+      input.addEventListener('input', () => {
+          const searchText = input.value.toLowerCase();
+          const cards = document.querySelectorAll('perfil-card');
+
+          cards.forEach(card => {
+              const nombre = card.querySelector('[slot="nombre"]')?.textContent.toLowerCase() || '';
+              const idname = card.querySelector('[slot="idname"]')?.textContent.toLowerCase() || '';
+              if (nombre.includes(searchText) || idname.includes(searchText)) {
+                  card.style.display = '';
+              } else {
+                  card.style.display = 'none';
+              }
+          });
       });
-    });
   }
 }
 

@@ -16,8 +16,7 @@ class PerfilCard extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
         div {
-            width: 300px;
-            height: 595px;
+            width: 20vw;
             border: 2px solid #333;
             border-radius: 7px;
             padding: 20px;
